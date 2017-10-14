@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>seatrips Delegate Pool</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://bootswatch.com/flatly/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="delegateApp" ng-controller="indexCtrl" bgcolor="black">
+        <div class="alert alert-alert">
+           <center> <h1> <font color="black">Seatrips Pool, Sharing weekly 50% of forged shift.</font></center>
+<div class="alert alert-warning"> <h5> <a href="https://dpostools.com/SHIFT/seatrips" target="_blank"><font color="black">Click here to Check Delegate info on @vekexasia dpostools</font></a></div>
+        <div class="row">
+               <div class="col-md-4">
+                    <div class="alert alert-warning" role="alert"><font color="black">Last payout: {{lastpayout|date}}</font></div>
+                </div>
+                <div class="col-md-8">
+                    <div class="alert alert-warning" role="alert"><font color="black">Next payout will be at: {{nextpayout|date}}</font></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="alert alert-warning" role="alert"><font color="black">Rank: {{delegate.rank}}</font></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alert alert-warning" role="alert"><font color="black">Productivity: {{delegate.productivity}}</font></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alert alert-warning" role="alert"><font color="black">Approval: {{delegate.approval}}</font></div>
+                </div>
+            </div>
+
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Address</th>
+                        <th>Paid (SHIFT)</th>
+                        <th>Pending (SHIFT)</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="acc in (accounts|orderBy:'-received')">
+                        <td>{{acc.address}}</td>
+                        <td>{{acc.received|number:4}}</td>
+                        <td>{{acc.pending|number:4}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+            <div align="center">
+                    This software is free software created by Davide Gessa, Forked by Seatrips and Ported to Shift<br>
+                    <a href="https://github.com/seatrips/delegatepool.seatrips.nl">Fork me on Github</a>
+                </div>
+        </div>
+    </body>
+</html>

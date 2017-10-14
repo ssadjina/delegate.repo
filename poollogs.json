@@ -1,0 +1,33 @@
+{
+    "withdraw": {
+        "ADDRESS": {
+            "received": 0.0,
+            "pending": 0.0,
+            "share": 20.0
+        }
+    },
+    "riseperday": 0.0,
+    "lastupdate": 1508000404,
+    "voters": [],
+    "standby": {
+        "ADDRESS": {
+            "received": 0.0,
+            "pending": 0.0
+        }
+    },
+    "accounts": {
+        "ADDRESS": {
+            "balance": 0.0,
+            "riseperday": 0.0,
+            "received": 0.0,
+            "pending": 0.0,
+            "share": 0.0
+        }
+    },
+    "weight": 0.0,
+    "lastpayout": 1507960803,
+    "skip": [
+        "ADDRESS",
+        "ADDRESS2"
+    ]
+}
