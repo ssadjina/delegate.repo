@@ -26,7 +26,8 @@ def loadLog ():
 			"accounts": {},
 			"skip": [],
 			"voters": [],
-			"withdraw": {}
+			"withdraw": {},
+                        "standby": {}
 		}
 	return data
 	
