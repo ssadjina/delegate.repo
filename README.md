@@ -53,7 +53,7 @@ cd /var/www/html/
 ```
 Edit app.js. Go to the line
 ```
-$http.get ('https://wallet.shiftnrg.org/api/deleg...
+$http.get ('https://wallet.oxycoin.io/api/delegates/get?username=XXX').then (function (res) {...
 ```
 (or similar) and make sure it's correct for your coin (e.g. https://wallet.rise.vision/api/delegates/get?username=[POOL NAME]).
 Then edit index.html to your liking. Find inspiration at http://rise.the-viking.online.
